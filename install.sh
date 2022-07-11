@@ -8,13 +8,13 @@ read name
 echo Your email is : $email
 echo Your name is  : $name
 
-mkdir ~/brandon/
-mkdir ~/brandon/repos/
+mkdir ~/$USER/
+mkdir ~/$USER/repos/
 
-mkdir ~/brandon/programacion/
-mkdir ~/brandon/programacion/nodejs/
-mkdir ~/brandon/programacion/go/
-mkdir ~/brandon/programacion/react/
+mkdir ~/$USER/programacion/
+mkdir ~/$USER/programacion/nodejs/
+mkdir ~/$USER/programacion/go/
+mkdir ~/$USER/programacion/react/
 
 sudo pacman -Syu
 
@@ -30,12 +30,12 @@ git config --global user.email $email
 git config --global user.name $name
 
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-
+nvim +PackerSync
 cp -r ./bspwm/ ~/.config
 cp -r ./sxhkd/ ~/.config
 cp -r ./alacritty/ ~/.config
 
-#rm -rf ../ArchConfig/
+rm -rf ../ArchConfig/
 
 clear
 
