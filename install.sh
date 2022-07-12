@@ -29,7 +29,8 @@ if [[ $gitconfig =~ [Yy] ]];then
   
   git config --global user.email $email
   git config --global user.name $name
-
+  git config credential.helper store
+  
   notify-send "Git is ready   Email: $email  Name: $name"
   clear
 fi
