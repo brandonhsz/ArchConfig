@@ -29,8 +29,14 @@ if [[ $gitconfig =~ [Yy] ]];then
   
   git config --global user.email $email
   git config --global user.name $name
-  git config credential.helper store
-  
+
+  printf "Would You Like have git credential store helper enable? [Y/N] "
+  read gitCredential
+
+  if [[ $gitCredential =~ [Yy] ]];then 
+    git config credential.helper store
+  fi
+ 
   notify-send "Git is ready   Email: $email  Name: $name"
   clear
 fi
