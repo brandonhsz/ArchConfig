@@ -45,6 +45,7 @@ fi
 if [[ $rnEnviroment =~ [Yy] ]];then
   sudo pacman -S jre-openjdk-headless jre-openjdk jdk-openjdk openjdk-doc openjdk-src --needed --noconfirm
   sudo pacman -S android-studio --needed --noconfirm
+  paru -S watchman
   echo '# Android enviroment' >>~/.zshrc
   echo 'export ANDROID_SDK_ROOT=$HOME/Android/Sdk' >>~/.zshrc
   echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/emulator' >>~/.zshrc
