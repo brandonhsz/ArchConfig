@@ -49,7 +49,7 @@ if [[ $rnEnviroment =~ [Yy] ]];then
   echo '# Android enviroment' >>~/.zshrc
   echo 'export ANDROID_SDK_ROOT=$HOME/Android/Sdk' >>~/.zshrc
   echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/emulator' >>~/.zshrc
-  echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/emulator' >>~/.zshrc
+  echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/' >>~/.zshrc
   source ~/.zshrc
 
   notify-send "RN enviroment Ready, pls config Android Studio like documentation says"
@@ -89,7 +89,7 @@ mkdir ~/$USER/programacion/go/
 mkdir ~/$USER/programacion/react/
 
 #My necessary sofware
-paru -S microsoft-edge-stable visual-studio-code-bin archlinuxcn-keyring playerctl --needed --noconfirm
+paru -S microsoft-edge-stable visual-studio-code-bin gnome-keyring playerctl --needed --noconfirm
 
 cp -r ./bspwm/ ~/.config
 cp -r ./sxhkd/ ~/.config
