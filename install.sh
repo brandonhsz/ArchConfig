@@ -91,6 +91,10 @@ mkdir ~/$USER/programacion/react/
 #My necessary sofware
 paru -S microsoft-edge-stable visual-studio-code-bin gnome-keyring playerctl --needed --noconfirm
 
+rm -rf ~/.config/bspwm
+rm -rf ~/.config/sxhkd
+rm -rf ~/.config/alacritty
+
 cp -r ./bspwm/ ~/.config
 cp -r ./sxhkd/ ~/.config
 cp -r ./alacritty/ ~/.config
